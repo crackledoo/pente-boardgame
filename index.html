@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="styles.css" rel="stylesheet">
+  <script src="script.js"></script>
+  <title>Pente!</title>
+</head>
+<body>
+  <header>
+    <a href="#">Home</a>
+    <div class='scoreboard'>
+      <p id='pOneScore'></p>
+      <p id='pTwoScore' class='is-turn'></p>
+    </div>
+    <button class='restart-button' onclick='GameBoard.resetBoard()'>Restart Game</button>
+    <div id='createModal' class='modal'>
+      <div class='create-fields'>
+        <div>
+          <p>Player One's Name:</p>
+          <input id='playerOne' type='text'>
+        </div>
+        <div>
+          <p>Player Two's Name:</p>
+          <input id='playerTwo' type='text'>
+        </div>
+        <button id='submit' type='submit' onclick='submitBookForm()'>Play!</button>
+      </div>  
+    </div>
+    <div class='victory-screen'>
+      <div class='victory-text-field'>
+        <span class="close">x</span>
+        <h1 id='victoryh1'></h1>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div id="gameBoard">
+    </div>
+  </main>
+</body>
+</html>
