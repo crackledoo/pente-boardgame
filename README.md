@@ -1,2 +1,2 @@
 # pente-boardgame
-The 1977 abstract strategy game as a webpage!
+The 1977 abstract strategy game as a web app!
