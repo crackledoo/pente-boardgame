@@ -15,18 +15,34 @@
       <p id='pOneScore'></p>
       <p id='pTwoScore' class='is-turn'></p>
     </div>
-    <button class='restart-button' onclick='GameBoard.resetBoard()'>Restart Game</button>
+    <button class='restart-button' onclick='GameBoard.resetGame()'>Restart Game</button>
     <div id='createModal' class='modal'>
       <div class='create-fields'>
         <div>
-          <p>Player One's Name:</p>
-          <input id='playerOne' type='text'>
+          <p>Player One:</p>
+          <label for='name'>Name:</label>
+          <input type='text' name='name' id='pOneName'>
+          <label for='color'>Color:</label>
+          <select name='color' id='pOneColor'>
+            <option value='red'>Red</option>
+            <option value='yellow'>Yellow</option>
+            <option value='green'>Green</option>
+            <option value='blue'>Blue</option>
+          </select>
         </div>
         <div>
-          <p>Player Two's Name:</p>
-          <input id='playerTwo' type='text'>
+          <p>Player Two:</p>
+          <label for='name'>Name:</label>
+          <input type='text' name='name' id='pTwoName'>
+          <label for='color'>Color:</label>
+          <select name='color' id='pTwoColor'>
+            <option value='blue'>Blue</option>
+            <option value='red'>Red</option>
+            <option value='yellow'>Yellow</option>
+            <option value='green'>Green</option>
+          </select>
         </div>
-        <button id='submit' type='submit' onclick='submitBookForm()'>Play!</button>
+        <button id='submit' type='submit'>Play!</button>
       </div>  
     </div>
     <div class='victory-screen'>
@@ -37,7 +53,10 @@
     </div>
   </header>
   <main>
-    <div id="gameBoard">
+    <div class='game-view'>
+      <div class='captures'></div>
+      <div id="gameBoard"></div>
+      <div class='captures'></div>
     </div>
   </main>
 </body>
